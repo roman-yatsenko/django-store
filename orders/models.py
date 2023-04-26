@@ -29,7 +29,7 @@ class Order(models.Model):
         return sum(item.get_cost() for item in self.items.all())
 
 
-class OrderItem(modelf.Model):
+class OrderItem(models.Model):
     """Order Item Details"""
     order = models.ForeignKey(Order, on_delete=models.CASCADE, related_name='items')
     product = models.ForeignKey(Product, on_delete=models.CASCADE, related_name='order_items')
