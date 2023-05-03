@@ -25,7 +25,7 @@ def order_create(request):
         form = OrderCreateForm()
     return render(request, template_name='orders/order/create.html', 
                     context={
-                        'order': order,
+                        'form': form,
                         'cart': cart
                     }
             )
